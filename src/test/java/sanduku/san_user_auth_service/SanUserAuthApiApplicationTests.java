@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SanUserAuthServiceApplicationTests {
+public class SanUserAuthApiApplicationTests {
 
 	@Test
 	public void contextLoads() {
