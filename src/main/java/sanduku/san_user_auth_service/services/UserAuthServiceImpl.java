@@ -6,13 +6,15 @@ import sanduku.san_user_auth_service.services.dto.UserDtlsDto;
 
 @Component
 public class UserAuthServiceImpl implements UserAuthService{
+
     @Override
-    public UserDtlsDto registerUser(UserAuthModel userAuthModel) {
+    public UserDtlsDto registerUser(final UserAuthModel userAuthModel) {
         return null;
     }
 
     @Override
-    public UserDtlsDto loginUser(UserAuthModel userAuthModel) {
+    public UserDtlsDto loginUser(final UserAuthModel userAuthModel) {
+
         return null;
     }
 }
