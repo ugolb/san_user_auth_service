@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>sanduku</groupId>
+	<groupId>com.auth</groupId>
 	<artifactId>san_user_auth_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>san_user_auth_service</name>
 	<description>Auth user details</description>
@@ -36,17 +36,11 @@
 		</dependency>
 
         <dependency>
-            <groupId>common</groupId>
-            <artifactId>san_common_lib</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-		<dependency>
-			<groupId>com</groupId>
-			<artifactId>battleship</artifactId>
+			<groupId>com.common</groupId>
+			<artifactId>san_common_lib</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
+			<scope>compile</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

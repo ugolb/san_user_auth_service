@@ -1,4 +1,4 @@
-package sanduku.san_user_auth_service.services.dto;
+package com.auth.services.dto;
 
 import lombok.Builder;
 import lombok.Getter;

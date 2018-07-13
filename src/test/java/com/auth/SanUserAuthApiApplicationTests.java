@@ -1,4 +1,4 @@
-package sanduku.san_user_auth_service;
+package com.auth;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

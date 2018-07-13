@@ -1,14 +1,15 @@
-package sanduku.san_user_auth_service.services;
-
+package com.auth.services;
+import com.
+import com.auth.models.UserAuthModel;
+import com.auth.services.dto.UserDtlsDto;
 import org.springframework.stereotype.Component;
-import sanduku.san_user_auth_service.models.UserAuthModel;
-import sanduku.san_user_auth_service.services.dto.UserDtlsDto;
 
 @Component
 public class UserAuthServiceImpl implements UserAuthService{
 
     @Override
     public UserDtlsDto registerUser(final UserAuthModel userAuthModel) {
+
         return UserDtlsDto.builder()
                 .userId(1)
                 .userName(userAuthModel.getUserName())
@@ -17,7 +18,7 @@ public class UserAuthServiceImpl implements UserAuthService{
 
     @Override
     public UserDtlsDto loginUser(final UserAuthModel userAuthModel) {
-
+//        Encryptor
         return UserDtlsDto.builder()
                 .userId(1)
                 .userName(userAuthModel.getUserName())

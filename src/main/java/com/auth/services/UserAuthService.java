@@ -1,7 +1,7 @@
-package sanduku.san_user_auth_service.services;
+package com.auth.services;
 
-import sanduku.san_user_auth_service.models.UserAuthModel;
-import sanduku.san_user_auth_service.services.dto.UserDtlsDto;
+import com.auth.models.UserAuthModel;
+import com.auth.services.dto.UserDtlsDto;
 
 public interface UserAuthService {
 

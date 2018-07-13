@@ -1,4 +1,4 @@
-package sanduku.san_user_auth_service.models;
+package com.auth.models;
 
 import lombok.Getter;
 import lombok.Setter;

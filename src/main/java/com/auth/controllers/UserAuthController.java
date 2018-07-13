@@ -1,12 +1,12 @@
-package sanduku.san_user_auth_service.controllers;
+package com.auth.controllers;
 
+import com.auth.models.UserAuthModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import sanduku.san_user_auth_service.models.UserAuthModel;
-import sanduku.san_user_auth_service.services.dto.UserDtlsDto;
-import sanduku.san_user_auth_service.services.UserAuthServiceImpl;
+import com.auth.services.dto.UserDtlsDto;
+import com.auth.services.UserAuthServiceImpl;
 
 import javax.validation.Valid;
 

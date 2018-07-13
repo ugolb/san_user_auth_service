@@ -1,4 +1,4 @@
-package sanduku.san_user_auth_service;
+package com.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
