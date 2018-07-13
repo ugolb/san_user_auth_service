@@ -9,12 +9,18 @@ public class UserAuthServiceImpl implements UserAuthService{
 
     @Override
     public UserDtlsDto registerUser(final UserAuthModel userAuthModel) {
-        return null;
+        return UserDtlsDto.builder()
+                .userId(1)
+                .userName(userAuthModel.getUserName())
+                .build();
     }
 
     @Override
     public UserDtlsDto loginUser(final UserAuthModel userAuthModel) {
 
-        return null;
+        return UserDtlsDto.builder()
+                .userId(1)
+                .userName(userAuthModel.getUserName())
+                .build();
     }
 }
