@@ -6,7 +6,7 @@
 	<groupId>com.auth</groupId>
 	<artifactId>san_user_auth_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<name>san_user_auth_service</name>
 	<description>Auth user details</description>
@@ -39,7 +39,7 @@
 			<groupId>com.common</groupId>
 			<artifactId>san_common_lib</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
+			<scope>system</scope>
         </dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
