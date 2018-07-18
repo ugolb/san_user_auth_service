@@ -1,10 +1,10 @@
-package com.auth.controllers;
+package com.san.auth.controllers;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.auth.models.UserAuthModel;
-import com.auth.services.dto.UserDtlsDto;
+import com.san.auth.models.UserAuthModel;
+import com.san.auth.services.dto.UserDtlsDto;
 
 @RequestMapping(value = "/battleship")
 public interface UserAuthApi {

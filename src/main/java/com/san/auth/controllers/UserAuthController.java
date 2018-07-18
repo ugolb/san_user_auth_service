@@ -1,12 +1,12 @@
-package com.auth.controllers;
+package com.san.auth.controllers;
 
-import com.auth.models.UserAuthModel;
+import com.san.auth.models.UserAuthModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.auth.services.dto.UserDtlsDto;
-import com.auth.services.UserAuthServiceImpl;
+import com.san.auth.services.dto.UserDtlsDto;
+import com.san.auth.services.UserAuthServiceImpl;
 
 import javax.validation.Valid;
 

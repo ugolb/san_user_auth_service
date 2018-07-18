@@ -1,7 +1,7 @@
-package com.auth.services;
+package com.san.auth.services;
 
-import com.auth.models.UserAuthModel;
-import com.auth.services.dto.UserDtlsDto;
+import com.san.auth.models.UserAuthModel;
+import com.san.auth.services.dto.UserDtlsDto;
 
 public interface UserAuthService {
 
