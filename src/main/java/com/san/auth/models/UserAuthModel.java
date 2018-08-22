@@ -25,7 +25,7 @@ public class UserAuthModel {
     }
 
     public void setEmail(String email) {
-        this.email = encryptor.encrypt(email);
+        this.email = encryptor.encrypt(email.toLowerCase());
     }
 
     public void setPassword(String password) {
