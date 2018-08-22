@@ -10,7 +10,7 @@ public interface UserAuthDao {
      *
      * @return true if user exist false otherwise.
      */
-    boolean isUserExist(String email);
+    boolean userIsNotExist(String email);
 
     /**
      * Save user registration date to data store

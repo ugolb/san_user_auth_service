@@ -16,14 +16,14 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
     private final File userDataStore = new File("./" + "UserDataStore.txt");
 
     @Override
-    public boolean isUserExist(String email) {
+    public boolean userIsNotExist(String email) {
 
         return readDataStoreFile().contains(email);
     }
 
     @Override
     public UserDtlsDto saveUserRegistrationData(final UserAuthModel userAuthModel) {
-        if(isUserExist(userAuthModel.getEmail())){
+        if(userIsNotExist(userAuthModel.getEmail())){
             throw new IllegalArgumentException("User already exist");
         }
         return writeToFileUserData(createFileDataStoreIfNotExist(), userAuthModel);
@@ -31,12 +31,12 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
 
     @Override
     public UserDtlsDto loginUser(UserAuthModel userAuthModel) {
-        if(!isUserExist(userAuthModel.getEmail()) && !isUserExist(userAuthModel.getPassword())){
+        if(!userIsNotExist(userAuthModel.getEmail()) && !userIsNotExist(userAuthModel.getPassword())){
             throw new IllegalArgumentException("User does not exist");
         }
         return UserDtlsDto.builder()
                 .userName(userAuthModel.getUserName())
-                .userId(111)
+                .userId(111L)
                 .build();
     }
 
@@ -58,7 +58,7 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
         }
 
         return UserDtlsDto.builder()
-                .userId(111)
+                .userId(111L)
                 .userName(userAuthModel.getUserName())
                 .build();
     }

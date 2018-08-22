@@ -7,6 +7,6 @@ import lombok.Getter;
 @Getter
 public class UserDtlsDto {
     private String userName;
-    private int userId;
+    private Long userId;
 
 }

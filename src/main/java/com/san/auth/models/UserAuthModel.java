@@ -13,11 +13,11 @@ public class UserAuthModel {
     private String userName;
 
     @NotNull
-    @Size(min = 5, max = 60)
+//    @Size(min = 5, max = 60)
     private String email;
 
     @NotNull
-    @Size(min = 5, max = 60)
+//    @Size(min = 5, max = 60)
     private String password;
 
     public void setUserName(String userName) {
