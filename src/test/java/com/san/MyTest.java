@@ -24,7 +24,7 @@ public class MyTest {
 
         User user = new User("dimas", "dimas@gmail.com", "&*TGh8jho6g45vbdufnghmjkij8hkby", LocalDateTime.now());
 
-        repository.save(user);
+//        repository.save(user);
 
 //        List<User> byEmail = repository.findByEmail("dasha@gmail.com");
 

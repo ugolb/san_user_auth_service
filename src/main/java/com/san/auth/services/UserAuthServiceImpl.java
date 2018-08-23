@@ -1,6 +1,7 @@
 package com.san.auth.services;
 
-import com.san.auth.models.UserAuthModel;
+import com.san.auth.models.UserLoginModel;
+import com.san.auth.models.UserRegistrationModel;
 import com.san.auth.services.dao.UserAuthDaoMySqlImpl;
 import com.san.auth.services.dto.UserDtlsDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +17,13 @@ public class UserAuthServiceImpl implements UserAuthService {
     }
 
     @Override
-    public UserDtlsDto registerUser(final UserAuthModel userAuthModel) {
-        return dao.saveUserRegistrationData(userAuthModel);
+    public UserDtlsDto registerUser(final UserRegistrationModel userRegistrationModel) {
+        return dao.saveUserRegistrationData(userRegistrationModel);
 
     }
 
     @Override
-    public UserDtlsDto loginUser(final UserAuthModel userAuthModel) {
-
-        return dao.loginUser(userAuthModel);
+    public UserDtlsDto loginUser(final UserLoginModel userLoginModel) {
+        return dao.loginUser(userLoginModel);
     }
 }

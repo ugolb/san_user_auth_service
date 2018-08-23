@@ -1,6 +1,7 @@
+/*
 package com.san.auth.services.dao;
 
-import com.san.auth.models.UserAuthModel;
+import com.san.auth.models.UserRegistrationModel;
 import com.san.auth.services.dto.UserDtlsDto;
 import org.springframework.stereotype.Component;
 
@@ -22,20 +23,20 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
     }
 
     @Override
-    public UserDtlsDto saveUserRegistrationData(final UserAuthModel userAuthModel) {
-        if(userIsNotExist(userAuthModel.getEmail())){
+    public UserDtlsDto saveUserRegistrationData(final UserRegistrationModel userRegistrationModel) {
+        if(userIsNotExist(userRegistrationModel.getEmail())){
             throw new IllegalArgumentException("User already exist");
         }
-        return writeToFileUserData(createFileDataStoreIfNotExist(), userAuthModel);
+        return writeToFileUserData(createFileDataStoreIfNotExist(), userRegistrationModel);
     }
 
     @Override
-    public UserDtlsDto loginUser(UserAuthModel userAuthModel) {
-        if(!userIsNotExist(userAuthModel.getEmail()) && !userIsNotExist(userAuthModel.getPassword())){
+    public UserDtlsDto loginUser(UserRegistrationModel userRegistrationModel) {
+        if(!userIsNotExist(userRegistrationModel.getEmail()) && !userIsNotExist(userRegistrationModel.getPassword())){
             throw new IllegalArgumentException("User does not exist");
         }
         return UserDtlsDto.builder()
-                .userName(userAuthModel.getUserName())
+                .userName(userRegistrationModel.getUserName())
                 .userId(111L)
                 .build();
     }
@@ -49,9 +50,9 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
         }
     }
 
-    private UserDtlsDto writeToFileUserData(final File userDataStore, final UserAuthModel userAuthModel) {
+    private UserDtlsDto writeToFileUserData(final File userDataStore, final UserRegistrationModel userRegistrationModel) {
         try (Writer output = new BufferedWriter(new FileWriter(userDataStore.getPath(), true))) {
-            output.append("\n" + getConcatenatedUserAuthString(userAuthModel));
+            output.append("\n" + getConcatenatedUserAuthString(userRegistrationModel));
             output.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,20 +60,20 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
 
         return UserDtlsDto.builder()
                 .userId(111L)
-                .userName(userAuthModel.getUserName())
+                .userName(userRegistrationModel.getUserName())
                 .build();
     }
 
-    private String getConcatenatedUserAuthString(UserAuthModel userAuthModel) {
+    private String getConcatenatedUserAuthString(UserRegistrationModel userRegistrationModel) {
         StringBuilder stringBuilder = new StringBuilder();
         StringBuilder concatenatedString = stringBuilder
                 .append("111")
                 .append(SEPARATOR)
-                .append(userAuthModel.getUserName())
+                .append(userRegistrationModel.getUserName())
                 .append(SEPARATOR)
-                .append(userAuthModel.getEmail())
+                .append(userRegistrationModel.getEmail())
                 .append(SEPARATOR)
-                .append(userAuthModel.getPassword());
+                .append(userRegistrationModel.getPassword());
         return new String(concatenatedString);
     }
 
@@ -85,3 +86,4 @@ public class UserAuthDaoFileImpl implements UserAuthDao {
         return userDataStore;
     }
 }
+*/
