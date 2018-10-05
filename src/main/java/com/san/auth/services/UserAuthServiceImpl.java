@@ -6,6 +6,7 @@ import com.san.auth.services.dao.UserAuthDaoMySqlImpl;
 import com.san.auth.services.dto.UserDtlsDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Component
 public class UserAuthServiceImpl implements UserAuthService {

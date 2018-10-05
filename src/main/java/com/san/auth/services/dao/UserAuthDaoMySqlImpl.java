@@ -48,7 +48,7 @@ public class UserAuthDaoMySqlImpl implements UserAuthDao {
 
     @Override
     public UserDtlsDto loginUser(final UserLoginModel userLoginModel) {
-        List<User> users = getUserByEmail(userLoginModel.getEmail());
+        List<User> users = getUserByEmail(userLoginModel.getLogin());
 
         if (users.isEmpty()) {
             throw new IllegalArgumentException(USER_DOES_NOT_EXIST_EXCEPTION);
@@ -64,7 +64,7 @@ public class UserAuthDaoMySqlImpl implements UserAuthDao {
     }
 
     private void validateUserInputValue(UserLoginModel userLoginModel, User user) {
-        if (!userLoginModel.getEmail().equals(user.getEmail())
+        if (!userLoginModel.getLogin().equals(user.getEmail())
                 || !userLoginModel.getPassword().equals(user.getPassword())) {
             throw new IllegalArgumentException(WRONG_LOGIN_DATA_EXCEPTION);
         }
